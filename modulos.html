@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConectaNet - Módulos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+<div class="top-bar">
+    <div class="container">
+      <span>Barra de navegação</span>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">Logo</div>
+      <nav>
+        <ul>
+          <li><a href="paginainicial.html">Início</a></li>
+          <li><a href="modulos.html">Módulos</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="modulos-container">
+    <nav class="nav-bar">
+      <input type="text" placeholder="Pesquisar" id="search-bar">
+
+      <ul id="modulos-list">
+        <li class="modulos-item">
+          <a href="">Navegação Básica</a>
+        </li>
+
+        <li class="modulos-item">
+          <a href="">Navegação Segura</a>
+        </li>
+
+        <li class="modulos-item">
+          <a href="">Mídias Sociais</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="card-container">
+      <div class="card">
+        <div class="card-image">Ilustração no módulo</div>
+        <div class="card-content">
+          <h3 class="card-title">Nome do módulo</h3>
+          <p class="card-author">Conterudista</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">Ilustração no módulo</div>
+        <div class="card-content">
+          <h3 class="card-title">Nome do módulo</h3>
+          <p class="card-author">Conterudista</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">Ilustração no módulo</div>
+        <div class="card-content">
+          <h3 class="card-title">Nome do módulo</h3>
+          <p class="card-author">Conterudista</p>
+        </div>
+      </div>
+    </div>
+  </main>
+    <footer>
+        <div class="container">
+            <p>Rodapé</p>
+        </div>
+    </footer>
+
+     <script src="script.js"></script>
+</body>
+</html>
