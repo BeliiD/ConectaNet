@@ -101,11 +101,14 @@ main {
 }
 
 .menu-button{
-    width: 50%;
+    width: 45%;
     height: 50px;
     border: #1a5e63 solid 2px;
     background-color: #fff;
     border-radius: 50px;
+    cursor: pointer;        /*Indica que os botões são clicaveis*/
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
 }
 
 /* --- Estilos do Rodapé --- */
@@ -205,7 +208,8 @@ footer {
 }
 
 .card-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat( 3, 1fr );      /*Obriga o navegador a distribuir os cards em colunhas alinhadas*/
   gap: 20px;
   flex-wrap: wrap;
   justify-content: space-around;

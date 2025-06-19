@@ -11,21 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     }
 
-    const navLinks = document.querySelectorAll('nav a');
-
-    navLinks.forEach(link => {
-
-        link.addEventListener('click', (event) => {
-
-            event.preventDefault(); 
-            
-            console.log(`O link "${link.textContent}" foi clicado!`);
-            alert(`Você clicou em "${link.textContent}". Esta ação poderia te levar para outra página.`);
-
-        });
-        
-    });
-
 });
 
 //Barra de pesquisa
