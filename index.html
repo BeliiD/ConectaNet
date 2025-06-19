@@ -13,6 +13,12 @@
 </head>
 <body>
 
+<div class="acessibilidade" aria-label="Ferramentas de acessibilidade">
+  <button onclick="aumentarFonte()" aria-label="Aumentar fonte">A+</button>
+  <button onclick="diminuirFonte()" aria-label="Diminuir fonte">A-</button>
+  <button onclick="modoAltoContraste()" aria-label="Ativar alto contraste">🌙 Contraste</button>
+</div>
+
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -78,5 +84,25 @@
     </footer>
     
     <script src="script.js"></script>
+
+    <script>
+  let fonte = 100;
+
+  function aumentarFonte() {
+    fonte += 10;
+    document.body.style.fontSize = fonte + '%';
+  }
+
+  function diminuirFonte() {
+    if (fonte > 60) {
+      fonte -= 10;
+      document.body.style.fontSize = fonte + '%';
+    }
+  }
+
+  function modoAltoContraste() {
+    document.body.classList.toggle('contraste');
+  }
+</script>
 </body>
 </html>
