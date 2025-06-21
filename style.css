@@ -293,37 +293,9 @@ footer {
   margin-top: 40px;
 }
 
-.acessibilidade {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  display: flex;
-  gap: 10px;
-  z-index: 1000;
-}
-
-.acessibilidade button {
-  background-color: #004d4d;
-  color: white;
-  border: none;
-  padding: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.contraste {
-  background-color: #000 !important;
-  color: #ff0 !important;
-}
-
-.contraste a,
-.contraste h1,
-.contraste h2,
-.contraste h3,
-.contraste h4,
-.contraste p,
-.contraste span {
-  color: #ff0 !important;
-  background: #000 !important;
+#userwayAccessibilityIcon {
+  position: fixed !important;
+  top: 60%; /* logo abaixo do botão do VLibras */
+  right: 20px !important;
+ /* z-index: 9998; /* um abaixo do VLibras só para evitar conflitos visuais */
 }

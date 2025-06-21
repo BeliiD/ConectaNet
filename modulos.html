@@ -5,14 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ConectaNet - Módulos</title>
   <link rel="stylesheet" href="style.css">
+
+  <script>
+        (function (d) {
+            var s = d.createElement("script");
+            s.setAttribute("data-widget-layout", "full");
+            s.setAttribute("data-account", "URCfNynVSi");
+            s.setAttribute("src", "https://cdn.userway.org/widget.js");
+            (d.body || d.head).appendChild(s);
+        })(document);
+    </script>
+
 </head>
 <body>
-
-<div class="acessibilidade" aria-label="Ferramentas de acessibilidade">
-  <button onclick="aumentarFonte()" aria-label="Aumentar fonte">A+</button>
-  <button onclick="diminuirFonte()" aria-label="Diminuir fonte">A-</button>
-  <button onclick="modoAltoContraste()" aria-label="Ativar alto contraste">🌙 Contraste</button>
-</div>
 
   <div vw class="enabled">
         <div vw-access-button class="active"></div>
@@ -97,9 +102,11 @@
       </div>
     </div>
   </main>
-    <footer>
+  
+     <footer>
         <div class="container">
-            <p>Rodapé</p>
+            <p>Contato </p>
+            <p> cosaicsite@gmail.com </p>
         </div>
     </footer>
 
@@ -108,21 +115,6 @@
      <script>
   let fonte = 100;
 
-  function aumentarFonte() {
-    fonte += 10;
-    document.body.style.fontSize = fonte + '%';
-  }
-
-  function diminuirFonte() {
-    if (fonte > 60) {
-      fonte -= 10;
-      document.body.style.fontSize = fonte + '%';
-    }
-  }
-
-  function modoAltoContraste() {
-    document.body.classList.toggle('contraste');
-  }
 </script>
 </body>
 </html>
