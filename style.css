@@ -190,6 +190,7 @@ main {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   /* sombra nas letras */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
 }
 
 .menu-button:hover {
@@ -197,6 +198,9 @@ main {
   /* Leve crescimento */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   /* Sombra ao redor */
+  background-color: #006666;
+  color: white;
+  border-color: #004d4d;
 }
 
 /* --- Estilos do Rodapé --- */
@@ -204,7 +208,7 @@ footer {
   background-color: #1a5e63;
   /* Verde-azulado escuro do rodapé */
   color: white;
-  padding: 46px 0;
+  padding: 18px 0;
   text-align: center;
   font-size: 1.5em;
   font-weight: 700;
@@ -281,9 +285,21 @@ footer {
   grid-template-columns: repeat(3, 1fr);
   /*Obriga o navegador a distribuir os cards em colunhas alinhadas*/
   gap: 20px;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-items: stretch;
+  align-items: stretch;
+  justify-content: center;
+  padding: 20px;
 }
+
+.card-link {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: inherit;       /* Faz o texto dentro do link herdar a cor do pai */
+    display: block;       /* FUNDAMENTAL: Faz o link ocupar todo o espaço da sua célula no grid */
+    width: 100%;          /* Garante que o link ocupe toda a largura disponível na célula do grid */
+    height: 100%;         /* Garante que o link ocupe toda a altura disponível na célula do grid */
+    /* Remover quaisquer margens que você possa ter tido no .card, pois o `gap` do grid-container já as gerencia */
+}
+
 
 .card {
   border: 1px solid #000;
@@ -291,6 +307,13 @@ footer {
   padding: 16px;
   width: 300px;
   box-sizing: border-box;
+  transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-link:hover .card {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  transform: translateY(-5px);
 }
 
 .card-image {
@@ -416,4 +439,77 @@ footer {
 
 .mobile-menu.active .line3 {
   transform: rotate(45deg) translate(-5px, -7px);
+}
+
+  .download-button {
+    margin-top: 500px;
+    padding: 10px 20px;
+    border: 2px solid #006666;
+    border-radius: 50px;
+    background-color: white;
+    color: #000000;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .download-button:hover {
+    transform: scale(1.10);
+    /* Leve crescimento */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* Sombra ao redor */
+    background-color: #006666;
+    color: white;
+    border-color: #004d4d;
+  }
+
+  .inicio-button {
+    display: block;       /* Transforma em bloco para ocupar toda a largura */
+    margin-right: auto;   /* Empurra para a direita */
+    width: fit-content;  /* Ajusta a largura ao conteúdo do botão */
+    /* Mantenha o resto do seu estilo original */
+    padding: 10px 20px;
+    border: 2px solid #006666;
+    border-radius: 50px;
+    background-color: white;
+    color: #000000;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;    /* Espaço acima do botão */
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .inicio-button:hover {
+    transform: scale(1.10);
+    /* Leve crescimento */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* Sombra ao redor */
+    background-color: #006666;
+    color: white;
+    border-color: #004d4d;
+  }
+
+.video-modulos {
+  margin-top: 20px;
+  width: 750px; /* ou 100%, ou qualquer valor fixo */
+  height: 350px;
+  max-width: 100%; /* para não ultrapassar a largura do container */
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  color: #666;
+}
+
+.titulo-modulo {
+
+  margin-top: 20px;
 }
