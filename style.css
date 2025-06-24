@@ -457,7 +457,7 @@ footer {
     border-color: #004d4d;
   }
 
-  .inicio-button {
+  .voltar-button {
     display: block;       /* Transforma em bloco para ocupar toda a largura */
     margin-right: auto;   /* Empurra para a direita */
     width: fit-content;  /* Ajusta a largura ao conteúdo do botão */
@@ -474,7 +474,7 @@ footer {
     font-size: 20px;
   }
 
-  .inicio-button:hover {
+  .voltar-button:hover {
     transform: scale(1.10);
     /* Leve crescimento */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -524,3 +524,29 @@ footer {
   margin: 0;
   display: block;  
 }
+
+.inicio-button {
+    display: block;       /* Transforma em bloco para ocupar toda a largura */
+    width: fit-content;  /* Ajusta a largura ao conteúdo do botão */
+    /* Mantenha o resto do seu estilo original */
+    padding: 10px 20px;
+    border: 2px solid #006666;
+    border-radius: 50px;
+    background-color: white;
+    color: #000000;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;    /* Espaço acima do botão */
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .inicio-button:hover {
+    transform: scale(1.10);
+    /* Leve crescimento */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* Sombra ao redor */
+    background-color: #006666;
+    color: white;
+    border-color: #004d4d;
+  }
