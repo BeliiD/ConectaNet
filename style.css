@@ -25,12 +25,14 @@ body {
   left: 0%;
   border-bottom: 1px solid #ddd;
   box-shadow: 0px 10px 8px #d1d1d1;
+  height: auto;
 }
 
 .main-header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100px;
 }
 
 .logo {
@@ -308,10 +310,11 @@ footer {
 
 .card-image {
   background-color: #ddd;
-  height: 150px;
+  height: 178px;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .card-title {
@@ -342,6 +345,10 @@ footer {
     position: sticky;
     top: 0;
     right: 0;
+     display: flex;
+  justify-content: space-between;
+  align-items: center; /* centraliza verticalmente */
+  padding: 16px 32px; /* controle de espaçamento */
   }
 
   .nav-list {
@@ -499,6 +506,21 @@ footer {
 #userwayAccessibilityIcon {
   position: fixed !important;
   right: 20px !important;
-  top: calc(60% + 60px) !important; /* ou ajuste esse valor conforme necessário */
+  top: calc(60% + 60px) !important; 
   z-index: 9998;
+}
+
+.logo-img {
+  height: 250px; 
+  object-fit: contain;
+}
+
+.card-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  display: block;  
 }
