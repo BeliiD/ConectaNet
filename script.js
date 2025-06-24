@@ -21,6 +21,7 @@ class MobileNavbar {
         this.activeClass = "active";
 
         this.handleClick = this.handleClick.bind(this);
+        this.handleKeydown = this.handleKeydown.bind(this);
     }
 
     animateLinks() {
@@ -38,8 +39,16 @@ class MobileNavbar {
         this.animateLinks();
     }
 
+    handleKeydown(event) {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault(); // evita scroll se for barra de espaço
+            this.handleClick();
+        }
+    }
+
     addClickEvent() {
         this.mobileMenu.addEventListener("click", this.handleClick);
+        this.mobileMenu.addEventListener("keydown", this.handleKeydown); 
     }
 
     init() {

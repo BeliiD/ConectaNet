@@ -15,16 +15,6 @@ body {
   gap: 2em;
 }
 
-.top-bar {
-  background-color: #0b2239;
-  color: white;
-  padding: 10px 0;
-  font-size: 14px;
-}
-
-.top-bar .container {
-  text-align: right;
-}
 
 .main-header {
   width: 100vw;
@@ -342,14 +332,6 @@ footer {
   margin-top: 40px;
 }
 
-#userwayAccessibilityIcon {
-  position: fixed !important;
-  top: 60%;
-  /* logo abaixo do botão do VLibras */
-  right: 20px !important;
-  /* z-index: 9998; /* um abaixo do VLibras só para evitar conflitos visuais */
-}
-
 @media screen and (max-width: 768px) {
 
   body {
@@ -512,4 +494,11 @@ footer {
 .titulo-modulo {
 
   margin-top: 20px;
+}
+
+#userwayAccessibilityIcon {
+  position: fixed !important;
+  right: 20px !important;
+  top: calc(60% + 60px) !important; /* ou ajuste esse valor conforme necessário */
+  z-index: 9998;
 }
