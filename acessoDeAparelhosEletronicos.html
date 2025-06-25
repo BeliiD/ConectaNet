@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ConectaNet - Módulos</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
 
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_control_key" />
   <script>
     (function (d) {
       var s = d.createElement("script");
@@ -34,9 +36,9 @@
 
   <header class="main-header">
     <nav class="nav-header">
-       <a class="logo" href="/">
-                <img src="img/logo_conectafacil.png" alt="Logo ConectaFácil" class="logo-img">
-            </a>
+      <a class="logo" href="/">
+        <img src="img/logo_conectafacil.png" alt="Logo ConectaFácil" class="logo-img">
+      </a>
       <div class="mobile-menu">
         <div class="line1"></div>
         <div class="line2"></div>
@@ -49,25 +51,40 @@
     </nav>
   </header>
 
-<main>
-  <h1 class="titulo-modulo">Acesso a Aparelhos Eletrônicos</h1>
+  <main>
+    <h1 class="titulo-modulo" id="page-title" style="display: flex; justify-content: center; margin-bottom: 0;">Acesso a
+      Aparelhos
+      Eletrônicos</h1>
 
-  <div class="video-modulos">
-    Vídeo do curso
-  </div>
-
-  <a href="conteudo.pdf" class="download-button" download>Baixar conteúdo em PDF</a>
-
-  <br>
-
-  <a href="modulos.html" class="voltar-button">Voltar</a>
-</main>
-
-<footer>
-    <div class="container">
-        <p>Contato </p>
-        <p> cosaicsite@gmail.com </p>
+    <div class="control-conteudo">
+      <a href="acessoDeAparelhosEletronicos.html" class="link-conteudo">Conteúdo em vídeo</a>
+      <a href="Modulos-PDF/Modulo1PDF.html" class="link-conteudo">Conteúdo em PDF</a>
     </div>
-</footer>
+    <div class="video-modulos">
+      Vídeo do curso
+    </div>
 
-<script src="script.js"></script>
+    <a href="conteudo.pdf" class="download-button" download>Baixar conteúdo em PDF</a>
+
+    <br>
+
+    <a href="modulos.html" class="voltar-button">Voltar</a>
+  </main>
+
+  <a href="#page-title" class="back-to-top" onclick="scrollToTop()">
+    <span class="material-symbols-outlined">
+      keyboard_control_key
+    </span>
+  </a>
+
+  <footer>
+    <div class="container">
+      <p>Contato </p>
+      <p> cosaicsite@gmail.com </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

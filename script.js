@@ -48,7 +48,7 @@ class MobileNavbar {
 
     addClickEvent() {
         this.mobileMenu.addEventListener("click", this.handleClick);
-        this.mobileMenu.addEventListener("keydown", this.handleKeydown); 
+        this.mobileMenu.addEventListener("keydown", this.handleKeydown);
     }
 
     init() {
@@ -91,3 +91,18 @@ searchInput.addEventListener('input', (event) => {
 function formatString(value) {
     return value.toLowerCase().trim();
 }
+
+//Scroll para o topo da página
+const backToTopButton = document.querySelector('.back-to-top')
+
+const backToTop = () => {
+    if (window.scrollY >= 100) {
+        backToTopButton.classList.add('show')
+    } else {
+        backToTopButton.classList.remove('show')
+    }
+}
+
+window.addEventListener('scroll', function () {
+    backToTop()
+});
