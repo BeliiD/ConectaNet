@@ -365,6 +365,11 @@ footer {
   padding: 20px;
 }
 
+.videos img{
+  position: static;
+  width: 100px;
+}
+
 .control-conteudo a:hover {
   color: #33bfc9;
   box-shadow: #33bfc9 0 2px 2px;
