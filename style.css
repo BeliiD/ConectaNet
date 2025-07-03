@@ -31,6 +31,7 @@ body {
   border-bottom: 1px solid #ddd;
   box-shadow: 0px 10px 8px #d1d1d1;
   height: auto;
+  z-index: 2;
 }
 
 .main-header .container {
@@ -289,13 +290,31 @@ footer {
 .card-container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   /*Obriga o navegador a distribuir os cards em colunhas alinhadas*/
   gap: 30px;
   justify-items: stretch;
   align-items: stretch;
   justify-content: center;
   padding: 20px;
+}
+
+.acesso-modulo {
+  color: #fff;
+  font-size: 18px;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #1a5e63;
+  float: right;
+  cursor: pointer;
+}
+
+.acesso-modulo:hover {
+  background-color: #fff;
+  border: solid 1px #1a5e63;
+  color: #000;
 }
 
 .card-link {
@@ -319,8 +338,8 @@ footer {
   border: 1px solid #000;
   border-radius: 15px;
   padding: 16px;
-  width: 300px;
-  height: 500px;
+  width: 400px;
+  height: 350px;
   box-sizing: border-box;
   transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -365,7 +384,7 @@ footer {
   padding: 20px;
 }
 
-.videos img{
+.videos img {
   position: static;
   width: 100px;
 }
