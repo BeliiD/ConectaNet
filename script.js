@@ -66,27 +66,30 @@ const mobileNavbar = new MobileNavbar(
 );
 mobileNavbar.init();
 
-const searchInput = document.getElementById('search-bar')
+const searchInput = document.getElementById('search-bar');
 
-searchInput.addEventListener('input', (event) => {
+if (searchInput) {
+  searchInput.addEventListener('input', (event) => {
     const value = formatString(event.target.value);
 
     const itens = document.querySelectorAll("#modulos-list .modulos-item");
     const lista = document.getElementById('modulos-list');
 
     if (value != '') {
-        itens.forEach(item => {
-            if (formatString(item.textContent).indexOf(value) !== -1) {
-                item.style.display = 'flex';
-                lista.style.display = 'flex';
-            } else {
-                item.style.display = 'none';
-            }
-        });
+      itens.forEach(item => {
+        if (formatString(item.textContent).indexOf(value) !== -1) {
+          item.style.display = 'flex';
+          lista.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
     } else {
-        lista.style.display = 'none'
+      lista.style.display = 'none';
     }
-});
+  });
+}
+
 
 function formatString(value) {
     return value.toLowerCase().trim();
@@ -106,3 +109,35 @@ const backToTop = () => {
 window.addEventListener('scroll', function () {
     backToTop()
 });
+
+const imagens = [
+  'img/img1.png',
+  'img/img2.png',
+  'img/img3.png',
+  'img/img4.png',
+  'img/img5.png',
+  'img/img6.png',
+  'img/img7.png',
+  'img/img8.png'
+];
+
+let indiceAtual = 0;
+
+function mostrarImagem() {
+  const img = document.getElementById('carousel-img');
+  if (img) {
+    img.src = imagens[indiceAtual];
+  }
+}
+
+window.nextSlide = function () {
+  indiceAtual = (indiceAtual + 1) % imagens.length;
+  mostrarImagem();
+};
+
+window.prevSlide = function () {
+  indiceAtual = (indiceAtual - 1 + imagens.length) % imagens.length;
+  mostrarImagem();
+};
+
+document.addEventListener('DOMContentLoaded', mostrarImagem);
