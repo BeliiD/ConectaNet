@@ -384,9 +384,24 @@ footer {
   padding: 20px;
 }
 
+.videos {
+  width: 1020px;
+}
+
 .videos img {
   position: static;
   width: 100px;
+}
+
+.conteudo-pdf {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.conteudo-pdf embed {
+  width: 1100px;
+  height: 600px;
 }
 
 .control-conteudo a:hover {
@@ -529,8 +544,34 @@ footer {
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .card {
+    width: 300px;
+    height: 250;
+  }
+
   .modulos-button {
     width: 90%;
+  }
+
+  .control-conteudo {
+    padding: 5px;
+  }
+
+  .control-conteudo a {
+    font-size: 16px;
+  }
+
+  .videos {
+    width: 300px;
+  }
+
+  .videos iframe {
+    height: 200px;
+  }
+
+  .conteudo-pdf embed {
+    width: 300px;
+    height: 350px;
   }
 }
 
